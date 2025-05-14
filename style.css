@@ -92,6 +92,7 @@ option,
 :root {
     --clr-background: #0891b2;
     --box-shadow: 0 3px 10px 3px rgba(0,0,0,0.3);
+    --bezier: cubic-bezier(0.1, 0.6, 0.3, 1);
 }
 
 body {
@@ -123,6 +124,7 @@ h1,h2,h3,h4,h5,h6 {
 .img-container {
     position: relative;
     padding-top: 2em;
+    animation: fadeInRight 1.5s var(--bezier) both;
 }
 
 .img-container::before {
@@ -130,7 +132,7 @@ h1,h2,h3,h4,h5,h6 {
   position: absolute;
   top: 0;
   left: -50%;
-  width: 200vw;
+  width: 1000vw;
   height: 100%;
   background: var(--clr-background);
   transform-origin: bottom left;
@@ -160,6 +162,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .about-me {
     margin-top: 2em;
+    animation: fadeInLeft 1s var(--bezier) both;
 }
 
 .about-me__title {
@@ -185,6 +188,10 @@ h1,h2,h3,h4,h5,h6 {
     grid-auto-rows: max-content;
     gap: 3em;
     margin-bottom: 3em;
+}
+
+.main__card {
+    animation: fadeInUp 1.5s var(--bezier) both;
 }
 
 .card__img {
@@ -250,6 +257,7 @@ h1,h2,h3,h4,h5,h6 {
     .name {
         top: 0;
         left: 150%;
+        width: 150%;
         transform: translate(-50%, -100%);
         letter-spacing: 16px;
     }
@@ -297,9 +305,46 @@ h1,h2,h3,h4,h5,h6 {
         transform: translate(0, -100%);
         font-size: 3.5rem;
         margin-left: 6px;
+        width: 100%;
     }
 
     .about-me {
         flex: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
