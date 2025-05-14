@@ -218,6 +218,36 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.3em;
 }
 
+/* Footer */
+
+footer {
+    background-color: var(--clr-background);
+    color: white;
+}
+
+.footer__container {
+    padding: 1em 0;
+}
+
+.footer__title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.footer__img {
+    width: 100%;
+}
+
+.footer__links {
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    color: black;
+}
+
 @media (min-width: 786px) {
     .hero__container {
         box-shadow: var(--box-shadow);
@@ -273,6 +303,43 @@ h1,h2,h3,h4,h5,h6 {
     .main__header {
         text-align: start;
     }
+
+    /* Footer */
+    
+    footer {
+        display: flex;
+        gap: 1em;
+        padding: 2em 3.4em;
+    }
+
+    .footer__title {
+        text-align: left;
+    }
+
+    .footer__img {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .footer__links {
+        justify-content: start;
+        font-size: 2em;
+    }
+
+    .footer__phone::before {
+        font-family: "FontAwesome";
+        content: '\f095';
+        margin-right: 8px;
+        font-size: 1em;
+    }
+
+    .footer__mail::before {
+        font-family: "FontAwesome";
+        content: '\f0e0';
+        margin-right: 8px;
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -310,6 +377,15 @@ h1,h2,h3,h4,h5,h6 {
 
     .about-me {
         flex: 1;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 1.4rem;
+    }
+
+    .footer__img {
+        width: 55%;
     }
 }
 
