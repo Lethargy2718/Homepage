@@ -199,7 +199,12 @@ i:hover {
 }
 
 .main__card {
-    animation: fadeInUp 1.5s var(--bezier) both;
+    animation: fadeInUp 1.5s var(--bezier) backwards;
+    transition: transform 0.2s var(--bezier);
+}
+
+.main__card:hover {
+    transform: translateY(-5px);
 }
 
 .card__img {
