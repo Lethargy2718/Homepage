@@ -233,13 +233,11 @@ i:hover {
 
 /* Footer */
 
-footer {
+.footer-bg {
+    position: relative;
     background-color: var(--clr-background);
     color: white;
-}
-
-.footer__container {
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
 .footer__title {
@@ -248,7 +246,11 @@ footer {
 }
 
 .footer__img {
-    width: 100%;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
 }
 
 .footer__links {
@@ -321,8 +323,8 @@ footer {
     
     footer {
         display: flex;
+        justify-content: space-between;
         gap: 1em;
-        padding: 2em 3.4em;
     }
 
     .footer__title {
@@ -330,6 +332,7 @@ footer {
     }
 
     .footer__img {
+        all: unset;
         width: 40%;
         height: auto;
         object-fit: cover;
